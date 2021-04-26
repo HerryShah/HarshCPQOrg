@@ -1,4 +1,3 @@
-/*BearController*/
 public with sharing class BearController {
     @AuraEnabled(Cacheable=true)
     public static Bear__c[] getAllBears() {
