@@ -1,0 +1,18 @@
+<template>
+    <lightning-card  title="Hello World">
+        <p class="greeting-class">Hello {dynamicword}</p>
+        <lightning-input label="Greeting" onchange={greetingChangeHandler}></lightning-input>
+        <lightning-input type="checkbox" label="show div" onchange={showDiv}></lightning-input>
+        <template if:true={displayDiv}>
+            <div>I am Here</div>
+        </template>
+        <template for:each={cityList} for:item="city">
+            <p key={city}>{city}</p>
+        </template>
+
+        <template iterator:it123={cityList}>
+            <p key={it123.value}>{it123.value}</p>
+        </template>
+
+    </lightning-card>
+</template>
